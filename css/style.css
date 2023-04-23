@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-family: "Poppins", sans-serif;
+  background: url(../images/waves-bg.svg);
+  background-size: cover;
+}
+
+.quiz-container {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(1.5px);
+  -webkit-backdrop-filter: blur(1.5px);
+}
+
+.quiz-header {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding:40px 32px;
+}
+
+.quiz-header h2 {
+  align-self: center;
+}
+
+.quiz-header ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.quiz-header ul li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.1rem;
+}
+
+ul li label {
+  cursor: pointer;
+}
+
+button {
+  border-radius: 0px 0px 16px 16px;
+  background: rgba(107, 7, 255, 0.8);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(1.5px);
+  -webkit-backdrop-filter: blur(1.5px);
+  border: 1px solid rgba(107, 7, 255, 0.05);
+  display: block;
+  width: 100%;
+  padding: 20px;
+  color: white;
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+button:hover{
+   
+    box-shadow: 0 6px 40px rgba(0, 0, 0, 0.2);
+}
+
+input[type="radio"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 2px solid #6a07ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+
+
+input[type="radio"]:checked:before {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  background-color: #6a07ff;
+  border-radius: 50%;
+  animation: fade-in 0.3s ease-in-out;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.points{
+    padding: 20px;
+    align-self: center;
+}
